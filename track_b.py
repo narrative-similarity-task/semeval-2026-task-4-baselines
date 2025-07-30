@@ -28,8 +28,8 @@ def evaluate(labeled_data_path, embedding_lookup):
     )
 
     # Predict and calculate accuracy
-    df["predicted_a_is_closer"] = df["sim_a"] > df["sim_b"]
-    accuracy = (df["predicted_a_is_closer"] == df["text_a_is_closer"]).mean()
+    df["predicted_text_a_is_closer"] = df["sim_a"] > df["sim_b"]
+    accuracy = (df["predicted_text_a_is_closer"] == df["text_a_is_closer"]).mean()
     return accuracy
 
 
