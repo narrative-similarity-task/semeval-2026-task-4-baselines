@@ -6,9 +6,9 @@ For details on the task please see [our website](https://narrative-similarity-ta
 
 ## Setup
 
-Install dependencies (you probably want to do this in an isolated environment of some sort: virtualenv, conda, etc.):
+Install the dependencies (you probably want to do this in an isolated environment of some sort: virtualenv, conda, etc.):
 ```
-pip isntall -r requirements.txt
+pip install -r requirements.txt
 ```
 
 Place the `jsonl` files from [the sample data zip file](https://narrative-similarity-task.github.io/data/SemEval2026-Task_4-sample-v1.zip) into the `data` directory.
