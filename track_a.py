@@ -48,7 +48,7 @@ def predict(row):
 
 
 baseline = "random"  # or "openai"
-df = pd.read_json("data/track_a.jsonl", lines=True)
+df = pd.read_json("data/dev_track_a.jsonl", lines=True)
 
 if baseline == "openai":
     client = OpenAI()

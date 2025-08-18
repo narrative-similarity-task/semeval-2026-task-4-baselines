@@ -36,7 +36,7 @@ def evaluate(labeled_data_path, embedding_lookup):
 
 # Select baseline method
 baseline = "sbert"  # or "random"
-data = pd.read_json("data/track_b.jsonl", lines=True)
+data = pd.read_json("data/dev_track_b.jsonl", lines=True)
 
 if baseline == "sbert":
     model = SentenceTransformer("all-MiniLM-L6-v2")
