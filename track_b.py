@@ -9,6 +9,7 @@ import pandas as pd
 import torch
 from sentence_transformers import SentenceTransformer
 from sentence_transformers.util import cos_sim
+import numpy as np
 
 
 def evaluate(labeled_data_path, embedding_lookup):
@@ -35,7 +36,7 @@ def evaluate(labeled_data_path, embedding_lookup):
 
 # Select baseline method
 baseline = "sbert"  # or "random"
-data = pd.read_json("data/sample_track_b.jsonl", lines=True)
+data = pd.read_json("data/track_b.jsonl", lines=True)
 
 if baseline == "sbert":
     model = SentenceTransformer("all-MiniLM-L6-v2")
@@ -48,3 +49,5 @@ else:
 embedding_lookup = dict(zip(data["text"], embeddings))
 accuracy = evaluate("data/sample_track_a.jsonl", embedding_lookup)
 print(f"Accuracy: {accuracy:.3f}")
+
+np.save("output/track_b.npy", embeddings)
