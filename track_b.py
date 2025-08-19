@@ -47,7 +47,7 @@ else:
     sys.exit("Invalid baseline")
 
 embedding_lookup = dict(zip(data["text"], embeddings))
-accuracy = evaluate("data/sample_track_a.jsonl", embedding_lookup)
+accuracy = evaluate("data/dev_track_a.jsonl", embedding_lookup)
 print(f"Accuracy: {accuracy:.3f}")
 
 np.save("output/track_b.npy", embeddings)
