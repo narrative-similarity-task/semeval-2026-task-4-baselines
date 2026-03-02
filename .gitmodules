@@ -1,0 +1,3 @@
+[submodule "narrative-similarity-dataset"]
+	path = narrative-similarity-dataset
+	url = https://github.com/narrative-similarity-task/narrative-similarity-dataset.git
